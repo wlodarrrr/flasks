@@ -18,11 +18,24 @@ class Playground extends React.Component {
         }
     };
 
+    reset = () => {
+        this.state.game.randomize(20);
+        this.setState({ clickedId: null });
+        this.setState({ game: this.state.game });
+    }
+
     render() {
         const flasks = this.state.game.values.map(row => { return <Flask key={row.id} colors={row.colors} selected={this.state.clickedId === row.id} onClick={() => this.clicked(row.id)} /> });
 
-        return <div className='playground'>
-            {flasks}
+
+        return <div className='container'>
+            <div className='header'>
+                <button onClick={() => this.reset()}>Reset</button>
+                <span>{' Moves: ' + this.state.game.moves}</span>
+            </div>
+            <div className='playground'>
+                {flasks}
+            </div>
         </div>
     }
 }

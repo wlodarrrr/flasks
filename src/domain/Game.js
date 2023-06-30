@@ -4,6 +4,7 @@ class Game {
     flaskHeight = 4;
 
     values = [];
+    moves = 0;
 
     reset = (fullFlaskCount, emptyFlaskCount) => {
         this.values = [];
@@ -20,10 +21,37 @@ class Game {
         }
     }
 
-    randomize = movesCount => {
-        for (let i = 0; i < movesCount; i++) {
-            this.moveRandomColorReversible();
+    randomize = size => {
+        this.values = [];
+        let colors = [];
+        for (let i = 0; i < size; i++) {
+
+            this.values.push(new FlaskData(i, this.flaskHeight));
+
+            for (let j = 0; j < 4; j++) {
+                colors.push(i);
+            }
+
         }
+        this.values.push(new FlaskData(size, this.flaskHeight));
+        this.values.push(new FlaskData(size + 1, this.flaskHeight));
+
+        for (let i = colors.length - 1; i >= 0; i--) {
+            let random = Math.floor(Math.random() * i);
+            let temp = colors[random];
+            colors[random] = colors[i];
+            colors[i] = temp;
+        }
+
+        for (let i = 0; i < size; i++) {
+            const c = this.values[i];
+            c.add(colors.pop());
+            c.add(colors.pop());
+            c.add(colors.pop());
+            c.add(colors.pop());
+        }
+        this.moves = 0;
+
     }
 
     move = (fromId, toId) => {
@@ -45,8 +73,8 @@ class Game {
 
         for (let i = 0; i < countOfColorsToMove; i++) {
             to.add(from.remove());
-            console.log("color moved");
         }
+        this.moves++;
     }
 
     moveRandomColorReversible = () => {

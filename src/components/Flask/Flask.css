@@ -1,6 +1,6 @@
 .flask {
     width: 50px;
-    height: 100px;
+    height: 160px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -12,65 +12,89 @@
 
 .colorContainer {
     width: 50px;
-    height: 25px;
+    height: 40px;
 }
 
 .c0 {
-    background-color: #ff7f00;
+    background-color: rgb(0, 0, 0);
 }
 
 .c1 {
-    background-color: #ffff00;
+    background-color: rgb(128, 64, 0);
 }
 
 .c2 {
-    background-color: #007900;
+    background-color: rgb(64, 31, 0);
 }
 
 .c3 {
-    background-color: #ba00ff;
+    background-color: rgb(1, 255, 255);
 }
 
 .c4 {
-    background-color: #00aeae;
+    background-color: rgb(1, 127, 126);
 }
 
 .c5 {
-    background-color: #ff4600;
+    background-color: rgb(254, 0, 0);
 }
 
 .c6 {
-    background-color: #0000ff;
+    background-color: rgb(128, 0, 1);
 }
 
 .c7 {
-    background-color: #ad6f1d;
+    background-color: rgb(0, 148, 254);
 }
 
 .c8 {
-    background-color: #27e57e;
+    background-color: rgb(0, 73, 126);
 }
 
 .c9 {
-    background-color: #ffffff;
+    background-color: rgb(255, 216, 0);
 }
 
 .c10 {
-    background-color: #161716;
+    background-color: rgb(128, 107, 0);
 }
 
 .c11 {
-    background-color: #cce393;
+    background-color: rgb(177, 0, 254);
 }
 
 .c12 {
-    background-color: #652929;
+    background-color: rgb(89, 0, 128);
 }
 
 .c13 {
-    background-color: #464188;
+    background-color: rgb(0, 255, 1);
 }
 
+
+
+
+
 .c14 {
-    background-color: #e5a984;
+    background-color: rgb(1, 127, 1);
+}
+
+.c15 {
+    background-color: rgb(255, 0, 110);
+}
+
+.c16 {
+    background-color: rgb(127, 0, 55);
+}
+
+.c17 {
+    background-color: rgb(84, 84, 84);
+}
+
+.c18 {
+    background-color: rgb(168, 168, 168);
+}
+
+.c19 {
+    background-color: rgb(255, 255, 255);
 }

@@ -4,8 +4,7 @@ import Game from './domain/Game';
 
 function App() {
   let game = new Game();
-  game.reset(10,2);
-  game.randomize(100);
+  game.randomize(20);
   return (
     <div className="App">
       <Playground game = {game} />
